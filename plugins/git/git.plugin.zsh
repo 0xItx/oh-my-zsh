@@ -147,6 +147,8 @@ alias gignored='git ls-files -v | grep "^[[:lower:]]"'
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
 compdef git-svn-dcommit-push=git
 
+alias gi='git init'
+
 alias gk='\gitk --all --branches'
 compdef _git gk='gitk'
 alias gke='\gitk --all $(git log -g --pretty=format:%h)'
@@ -170,7 +172,7 @@ compdef _git gpoat=git-push
 alias gps='git push'
 alias gpv='git push -v'
 
-alias gr='git remote'
+alias gr='git remote -v'
 alias gra='git remote add'
 alias grb='git rebase'
 alias grba='git rebase --abort'
@@ -186,7 +188,6 @@ alias grset='git remote set-url'
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias gru='git reset --'
 alias grup='git remote update'
-alias grv='git remote -v'
 
 alias gsb='git status -sb'
 alias gsd='git svn dcommit'
