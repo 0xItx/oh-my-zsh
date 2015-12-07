@@ -133,7 +133,7 @@ ggl "${*}" && ggp "${*}"
 fi
 }
 compdef _git ggpnp=git-checkout
-alias ggsup='git branch --set-upstream-to=origin/$(current_branch)'
+alias gbsu='git branch --set-upstream-to'
 ggu() {
 [[ "$#" != 1 ]] && local b="$(current_branch)"
 git pull --rebase origin "${b:=$1}"
@@ -180,13 +180,13 @@ alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
 alias grbm='git rebase master'
 alias grbs='git rebase --skip'
+alias gre='git reset'
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias grmv='git remote rename'
 alias grrm='git remote remove'
 alias grset='git remote set-url'
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
-alias gru='git reset --'
 alias grup='git remote update'
 
 alias gsb='git status -sb'
