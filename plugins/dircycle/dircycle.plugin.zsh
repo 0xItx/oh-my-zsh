@@ -27,11 +27,5 @@ insert-cycledright () {
 zle -N insert-cycledright
 
 
-# add key bindings for iTerm2
-if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-	bindkey "^[[1;3D" insert-cycledleft
-	bindkey "^[[1;3C" insert-cycledright
-else
-	bindkey "\e[1;3D" insert-cycledleft
-	bindkey "\e[1;3C" insert-cycledright
-fi
+bindkey "\e[1;3D" insert-cycledleft
+bindkey "\e[1;3C" insert-cycledright
