@@ -182,7 +182,7 @@ alias grset='git remote set-url'
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias grup='git remote update'
 
-alias gsb='git status -sb'
+alias gs='git status -sb'
 alias gsd='git svn dcommit'
 alias gsi='git submodule init'
 alias gsps='git show --decorate -p --stat'
