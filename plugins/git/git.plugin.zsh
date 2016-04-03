@@ -185,19 +185,19 @@ alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias grup='git remote update'
 
 alias gs='git status -sb'
-alias gsd='git svn dcommit'
-alias gsi='git submodule init'
-alias gsps='git show --decorate -p --stat'
-alias gsr='git svn rebase'
-alias gss='git status -s'
 alias gst='git status'
+
+alias gsps='git show --decorate -p --stat'
+
 alias gsta='git stash'
 alias gstaa='git stash apply'
 alias gstad='git stash drop'
 alias gstal='git stash list'
 alias gstap='git stash pop'
 alias gstas='git stash show --text'
-alias gsu='git submodule update'
+
+alias gsb='git submodule'
+alias gsu='git submodule update --init --recursive'
 
 alias gts='git tag -s'
 alias gtv='git tag | sort -V'
