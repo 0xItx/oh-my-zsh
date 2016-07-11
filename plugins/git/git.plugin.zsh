@@ -58,9 +58,11 @@ alias gbss='git bisect start'
 
 alias gc='git commit -v'
 alias gc!='git commit -v --amend'
+alias gcn!='git commit -v --no-edit --amend'
 alias gca='git commit -v -a'
 alias gca!='git commit -v -a --amend'
-alias gcan!='git commit -v -a -s --no-edit --amend'
+alias gcan!='git commit -v -a --no-edit --amend'
+alias gcans!='git commit -v -a -s --no-edit --amend'
 alias gcam='git commit -a -m'
 alias gcb='git checkout -b'
 alias gcf='git config'
@@ -86,7 +88,7 @@ alias gdw='git diff --word-diff'
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 function gfg() { git ls-files | grep $@ }
-compdef gfg=grep
+compdef _grep gfg
 alias gfo='git fetch origin'
 
 alias gg='git gui citool'
