@@ -80,7 +80,8 @@ alias gcs='git commit -S'
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
-alias gdt='git diff-tree --no-commit-id --name-only -r'
+# alias gdt='git diff-tree --no-commit-id --name-only -r'
+alias gdt='git difftool'
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
 alias gdw='git diff --word-diff'
@@ -185,6 +186,8 @@ alias grrm='git remote remove'
 alias grset='git remote set-url'
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 alias grup='git remote update'
+
+alias grm='git rm'
 
 alias gs='git status -sb'
 alias gst='git status'
