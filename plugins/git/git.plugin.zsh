@@ -79,7 +79,7 @@ alias gcs='git commit -S'
 
 alias gd='git diff'
 alias gdca='git diff --cached'
-alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
+alias gdct='git describe --tags --dirty --always'
 # alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdt='git difftool'
 gdv() { git diff -w "$@" | view - }
