@@ -150,10 +150,10 @@ compdef _git gk='gitk'
 alias gke='\gitk --all $(git log -g --pretty=format:%h)'
 compdef _git gke='gitk'
 
-alias gfl='git log --stat --decorate'
-alias gfla='git log --stat --decorate --all --graph'
-alias gcl='git log --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
-alias gcla='git log --all --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gfl='git log -C --stat --decorate'
+alias gfla='git log -C --stat --decorate --all --graph'
+alias gcl='git log -C --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gcla='git log -C --all --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 
 alias gm='git merge'
 alias gmom='git merge origin/master'
@@ -192,7 +192,7 @@ alias grm='git rm'
 alias gs='git status -sb'
 alias gst='git status'
 
-alias gsps='git show --decorate -p --stat'
+alias gsps='git show -C --decorate -p --stat'
 
 alias gsta='git stash'
 alias gstaa='git stash apply'
