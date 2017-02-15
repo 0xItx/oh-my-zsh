@@ -44,6 +44,9 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gapa='git add --patch'
 
+alias gam='git am'
+alias gap='git apply -v'
+
 alias gb='git branch -vv'
 alias gba='git branch -vva'
 alias gbda='git branch --merged | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -d'
@@ -91,6 +94,8 @@ alias gfa='git fetch --all --prune'
 function gfg() { git ls-files | grep $@ }
 compdef _grep gfg
 alias gfo='git fetch origin'
+
+alias gfp='git format-patch'
 
 alias gg='git gui citool'
 alias gga='git gui citool --amend'
@@ -204,8 +209,9 @@ alias gstas='git stash show --text'
 alias gsb='git submodule'
 alias gsu='git submodule update --init --recursive'
 
+alias gtl='git log --simplify-by-decoration --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 alias gts='git tag -s'
-alias gtv='git tag | sort -V'
+alias gtv='git tag --sort v:refname'
 
 alias gunignore='git update-index --no-assume-unchanged'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
