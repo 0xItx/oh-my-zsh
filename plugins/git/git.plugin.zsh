@@ -202,7 +202,7 @@ alias gsps='git show -C --decorate -p --stat'
 alias gsta='git stash'
 alias gstaa='git stash apply'
 alias gstad='git stash drop'
-alias gstal='git stash list'
+alias gstal='git stash list --format="%n%C(yellow)%gd %Cgreen(%cr) %Creset%C(bold)%gs" --stat'
 alias gstap='git stash pop'
 alias gstas='git stash show --text'
 
