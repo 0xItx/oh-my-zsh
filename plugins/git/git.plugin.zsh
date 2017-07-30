@@ -161,10 +161,7 @@ alias gcl='git log -C --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold bl
 alias gcla='git log -C --all --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 
 alias gm='git merge'
-alias gmom='git merge origin/master'
-alias gmt='git mergetool --no-prompt'
-alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
-alias gmum='git merge upstream/master'
+alias gmnff='git merge --no-ff'
 
 alias gmv='git mv'
 
