@@ -49,7 +49,6 @@ alias gap='git apply -v'
 
 alias gb='git branch -vv'
 alias gba='git branch -vva'
-alias gbda='git branch --merged | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -d'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
@@ -162,6 +161,7 @@ alias gcla='git log -C --all --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(
 
 alias gm='git merge'
 alias gmnff='git merge --no-ff'
+alias gmsq='git merge --squash'
 
 alias gmv='git mv'
 
@@ -170,7 +170,7 @@ alias gpd='git push --dry-run'
 alias gpoat='git push origin --all && git push origin --tags'
 compdef _git gpoat=git-push
 alias gps='git push'
-alias gpv='git push -v'
+alias gpsr='git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)'
 
 alias gr='git remote -v'
 alias gra='git remote add'
@@ -217,8 +217,5 @@ alias gupv='git pull --rebase -v'
 alias glum='git pull upstream master'
 
 alias gvt='git verify-tag'
-
-alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
-alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
 
 alias gmbfp='git merge-base --fork-point'
