@@ -48,10 +48,10 @@ alias gam='git am'
 alias gap='git apply -v'
 
 alias gb='git branch -vv'
+compdef _git gb=git-branch
 alias gba='git branch -vva'
 alias gbl='git blame -b -w'
 alias gbnm='git branch --no-merged'
-alias gbr='git branch --remote'
 alias gbs='git bisect'
 alias gbsb='git bisect bad'
 alias gbsg='git bisect good'
@@ -96,12 +96,6 @@ alias gfo='git fetch origin'
 
 alias gfp='git format-patch'
 
-alias gg='git gui citool'
-alias gga='git gui citool --amend'
-ggf() {
-[[ "$#" != 1 ]] && local b="$(git_current_branch)"
-git push --force origin "${b:=$1}"
-}
 compdef _git ggf=git-checkout
 ggl() {
 if [[ "$#" != 0 ]] && [[ "$#" != 1 ]]; then
@@ -206,9 +200,9 @@ alias gstas='git stash show --text'
 alias gsb='git submodule'
 alias gsu='git submodule update --init --recursive'
 
+alias gta='git tag'
 alias gtl='git log --simplify-by-decoration --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 alias gts='git tag -s'
-alias gtv='git tag --sort v:refname'
 
 alias gunignore='git update-index --no-assume-unchanged'
 alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
