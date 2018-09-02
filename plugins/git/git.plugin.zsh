@@ -87,6 +87,7 @@ alias gdt='git difftool'
 gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
 alias gdw='git diff --word-diff'
+alias gic='git-icdiff'
 
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
@@ -175,7 +176,6 @@ alias grbi='git rebase -i'
 alias grbm='git rebase master'
 alias grbs='git rebase --skip'
 alias gre='git reset'
-alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias grmv='git remote rename'
 alias grrm='git remote remove'
