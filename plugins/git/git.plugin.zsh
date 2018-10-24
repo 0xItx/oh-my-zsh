@@ -79,8 +79,8 @@ compdef gcount=git
 alias gcp='git cherry-pick'
 alias gcs='git commit -S'
 
-alias gd='git diff'
-alias gdca='git diff --cached'
+alias gd='git diff --patch-with-stat'
+alias gdca='git diff --patch-with-stat --cached'
 alias gdct='git describe --tags --dirty --always'
 # alias gdt='git diff-tree --no-commit-id --name-only -r'
 alias gdt='git difftool'
