@@ -166,17 +166,14 @@ alias gpoat='git push origin --all && git push origin --tags'
 compdef _git gpoat=git-push
 alias gps='git push'
 alias gpsr='git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)'
+gpsrb() { git push origin HEAD:refs/for/$1 }
 
 alias gr='git remote -v'
 alias gra='git remote add'
 alias grb='git rebase'
-alias grba='git rebase --abort'
-alias grbc='git rebase --continue'
 alias grbi='git rebase -i'
-alias grbm='git rebase master'
-alias grbs='git rebase --skip'
 alias gre='git reset'
-alias grhh='git reset HEAD --hard'
+alias greha='git reset --hard'
 alias grmv='git remote rename'
 alias grrm='git remote remove'
 alias grset='git remote set-url'
@@ -190,7 +187,7 @@ alias gst='git status'
 
 alias gsps='git show -C --decorate -p --stat'
 
-alias gsta='git stash save'
+alias gsta='git stash push'
 alias gstaa='git stash apply'
 alias gstad='git stash drop'
 alias gstal='git stash list --format="%n%C(yellow)%gd %Cgreen(%cr) %Creset%C(bold)%gs" --stat'
