@@ -187,7 +187,7 @@ alias grm='git rm'
 alias gs='git status -sb'
 alias gst='git status'
 
-alias gsps='git show -C --decorate -p --stat'
+alias gsp='git show -C --decorate -p --stat'
 
 alias gsta='git stash push'
 alias gstaa='git stash apply'
