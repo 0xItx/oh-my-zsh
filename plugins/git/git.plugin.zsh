@@ -200,7 +200,7 @@ alias gsb='git submodule'
 alias gsu='git submodule update --init --recursive'
 
 alias gta='git tag'
-alias gtl='git log --simplify-by-decoration --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
+alias gtl='git log --all --graph --simplify-by-decoration --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"'
 alias gts='git tag -s'
 
 alias gunignore='git update-index --no-assume-unchanged'
