@@ -157,6 +157,7 @@ alias gcla='git log -C --all --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(
 
 alias gm='git merge'
 alias gmnff='git merge --no-ff'
+alias gmnc='git merge --no-ff --no-commit'
 alias gmsq='git merge --squash'
 
 alias gmv='git mv'
@@ -176,6 +177,8 @@ alias grbi='git rebase -i'
 alias grbiu='git rebase -i @{u}'
 alias gre='git reset'
 alias greha='git reset --hard'
+alias grem='git reset --merge'
+alias gremp='git reset --merge @~'
 alias grmv='git remote rename'
 alias grrm='git remote remove'
 alias grset='git remote set-url'
@@ -185,7 +188,9 @@ alias grup='git remote update'
 alias grm='git rm'
 
 alias gs='git status -sb'
+alias gso='git status -sb -uno'
 alias gst='git status'
+alias gsto='git status -uno'
 
 alias gsp='git show -C --decorate -p --stat'
 
